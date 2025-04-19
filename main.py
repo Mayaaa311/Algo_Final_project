@@ -5,7 +5,7 @@ from bnb import branch_and_bound
 from approx import greedy_set_cover
 from ls1 import local_search_1
 from ls2 import local_search_2
-
+output_folder = "output_approx"
 def read_instance(path):
     with open(path, 'r') as f:
         lines = f.readlines()
@@ -30,7 +30,7 @@ def write_trace(path, trace):
 
 
 def evaluate(filename, method, cutoff, seed=None):
-    os.makedirs("output", exist_ok=True)
+    os.makedirs(output_folder, exist_ok=True)
     U, subsets = read_instance(filename)
     start_time = time.time()
     trace = []
@@ -50,8 +50,8 @@ def evaluate(filename, method, cutoff, seed=None):
     
     # Output filenames
     base = os.path.splitext(os.path.basename(filename))[0]
-    sol_file = f"output/{base}_{method}_{cutoff}" + (f"_{seed}.sol" if seed else ".sol")
-    trace_file = f"output/{base}_{method}_{cutoff}" + (f"_{seed}.trace" if seed else ".trace")
+    sol_file = f"{output_folder}/{base}_{method}_{cutoff}" + (f"_{seed}.sol" if seed else ".sol")
+    trace_file = f"{output_folder}/{base}_{method}_{cutoff}" + (f"_{seed}.trace" if seed else ".trace")
 
     # Write output
     write_solution(sol_file, solution)
