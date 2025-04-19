@@ -46,7 +46,7 @@ def evaluate(filename, method, cutoff, seed=None):
     else:
         raise ValueError("Invalid method")
 
-    elapsed = round(time.time() - start_time, 2)
+    elapsed = round(time.time() - start_time, 6)
     
     # Output filenames
     base = os.path.splitext(os.path.basename(filename))[0]
@@ -57,6 +57,19 @@ def evaluate(filename, method, cutoff, seed=None):
     write_solution(sol_file, solution)
     if method != "Approx":  # Only BnB and LS need trace
         write_trace(trace_file, trace)
+
+
+   # === ✅ Print runtime and relative error ===
+    # Try to read from corresponding .out file
+    opt_path = f"data/{base}.out"
+
+    with open(opt_path, 'r') as f:
+        opt_val = int(f.readline().strip())
+    alg_val = len(solution)
+    rel_err = (alg_val - opt_val) / opt_val
+
+
+    print(f"[{base} | {method}] Total Runtime: {elapsed:.4f} seconds, Collection Size: {alg_val}, OPT: {opt_val}, RelErr: {rel_err:.4f}")
 
 if __name__ == "__main__":
     args = sys.argv
