@@ -5,7 +5,8 @@ from bnb import branch_and_bound
 from approx import greedy_set_cover
 from ls1 import local_search_1
 from ls2 import local_search_2
-output_folder = "output_approx"
+output_folder = "bnb_output"
+bnb_out = "output_approx"
 def read_instance(path):
     with open(path, 'r') as f:
         lines = f.readlines()
@@ -36,7 +37,13 @@ def evaluate(filename, method, cutoff, seed=None):
     trace = []
     
     if method == "BnB":
-        solution, trace = branch_and_bound(U, subsets, cutoff, start_time)
+        Approx = "Approx"
+        base = os.path.splitext(os.path.basename(filename))[0]
+        best_file = f"{bnb_out}/{base}_{Approx}_{60}.sol" 
+        with open(best_file, 'r') as file:
+            first_line = file.readline()
+            best_size = int(first_line.strip().split()[0])
+        solution, trace = branch_and_bound(U, subsets, cutoff, start_time,best_size)
     elif method == "Approx":
         solution = greedy_set_cover(U, subsets)
     elif method == "LS1":
