@@ -5,8 +5,7 @@ from bnb import branch_and_bound
 from approx import greedy_set_cover
 from ls1 import local_search_1
 from ls2 import local_search_2
-output_folder = "bnb_output"
-bnb_out = "output_approx"
+
 def read_instance(path):
     with open(path, 'r') as f:
         lines = f.readlines()
@@ -30,8 +29,8 @@ def write_trace(path, trace):
 
 
 
-def evaluate(filename, method, cutoff, seed=None):
-    os.makedirs(output_folder, exist_ok=True)
+def evaluate(filename, method, cutoff, seed=None,basefolder = "outfile"):
+    os.makedirs(basefolder, exist_ok=True)
     U, subsets = read_instance(filename)
     start_time = time.time()
     trace = []
@@ -39,7 +38,7 @@ def evaluate(filename, method, cutoff, seed=None):
     if method == "BnB":
         Approx = "Approx"
         base = os.path.splitext(os.path.basename(filename))[0]
-        best_file = f"{bnb_out}/{base}_{Approx}_{60}.sol" 
+        best_file = f"{basefolder}/{base}_{Approx}_{60}.sol" 
         with open(best_file, 'r') as file:
             first_line = file.readline()
             best_size = int(first_line.strip().split()[0])
@@ -57,8 +56,8 @@ def evaluate(filename, method, cutoff, seed=None):
     
     # Output filenames
     base = os.path.splitext(os.path.basename(filename))[0]
-    sol_file = f"{output_folder}/{base}_{method}_{cutoff}" + (f"_{seed}.sol" if seed else ".sol")
-    trace_file = f"{output_folder}/{base}_{method}_{cutoff}" + (f"_{seed}.trace" if seed else ".trace")
+    sol_file = f"{basefolder}/{base}_{method}_{cutoff}" + (f"_{seed}.sol" if seed else ".sol")
+    trace_file = f"{basefolder}/{base}_{method}_{cutoff}" + (f"_{seed}.trace" if seed else ".trace")
 
     # Write output
     write_solution(sol_file, solution)
@@ -90,5 +89,7 @@ if __name__ == "__main__":
             cutoff = int(args[i+1])
         elif args[i] == '-seed':
             seed = int(args[i+1])
+        elif args[i] == '-outfile':
+            basefolder = args[i+1]
     
-    evaluate(inst, method, cutoff, seed)
+    evaluate(inst, method, cutoff, seed,basefolder)
