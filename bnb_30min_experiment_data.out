@@ -1,0 +1,68 @@
+max gain: 40.0
+[large1 | BnB] Total Runtime: 1800.0017 seconds, Collection Size: 0, OPT: 50, RelErr: -1.0000
+max gain: 7.0
+[large10 | BnB] Total Runtime: 1800.0013 seconds, Collection Size: 0, OPT: 221, RelErr: -1.0000
+max gain: 10.0
+[large11 | BnB] Total Runtime: 1800.0002 seconds, Collection Size: 0, OPT: 40, RelErr: -1.0000
+max gain: 11.875
+[large12 | BnB] Total Runtime: 1800.0001 seconds, Collection Size: 0, OPT: 15, RelErr: -1.0000
+max gain: 9.7
+[large2 | BnB] Total Runtime: 2145.4898 seconds, Collection Size: 0, OPT: 19, RelErr: -1.0000
+max gain: 11.875
+[large3 | BnB] Total Runtime: 1970.9798 seconds, Collection Size: 0, OPT: 15, RelErr: -1.0000
+max gain: 13.0
+[large4 | BnB] Total Runtime: 2051.9020 seconds, Collection Size: 0, OPT: 91, RelErr: -1.0000
+max gain: 31.75
+[large5 | BnB] Total Runtime: 2719.9063 seconds, Collection Size: 8, OPT: 6, RelErr: 0.3333
+max gain: 32.0
+[large6 | BnB] Total Runtime: 2074.9089 seconds, Collection Size: 7, OPT: 6, RelErr: 0.1667
+max gain: 19.0
+[large7 | BnB] Total Runtime: 2692.8304 seconds, Collection Size: 0, OPT: 95, RelErr: -1.0000
+max gain: 18.666666666666668
+[large8 | BnB] Total Runtime: 2611.8857 seconds, Collection Size: 5, OPT: 5, RelErr: 0.0000
+max gain: 12.0
+[large9 | BnB] Total Runtime: 1985.0429 seconds, Collection Size: 0, OPT: 14, RelErr: -1.0000
+max gain: 4.0
+[small1 | BnB] Total Runtime: 0.0015 seconds, Collection Size: 5, OPT: 5, RelErr: 0.0000
+max gain: 4.0
+[small10 | BnB] Total Runtime: 0.0003 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 10.0
+[small11 | BnB] Total Runtime: 0.0053 seconds, Collection Size: 4, OPT: 4, RelErr: 0.0000
+max gain: 6.0
+[small12 | BnB] Total Runtime: 0.0022 seconds, Collection Size: 3, OPT: 3, RelErr: 0.0000
+max gain: 7.0
+[small13 | BnB] Total Runtime: 0.0003 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 3.0
+[small14 | BnB] Total Runtime: 0.0003 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 10.0
+[small15 | BnB] Total Runtime: 0.0007 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 4.5
+[small17 | BnB] Total Runtime: 0.0011 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 6.5
+[small18 | BnB] Total Runtime: 0.0008 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 2.0
+[small2 | BnB] Total Runtime: 0.0003 seconds, Collection Size: 3, OPT: 3, RelErr: 0.0000
+max gain: 6.0
+[small3 | BnB] Total Runtime: 0.0042 seconds, Collection Size: 5, OPT: 5, RelErr: 0.0000
+max gain: 2.0
+[small4 | BnB] Total Runtime: 0.0010 seconds, Collection Size: 4, OPT: 4, RelErr: 0.0000
+max gain: 7.0
+[small5 | BnB] Total Runtime: 0.0152 seconds, Collection Size: 5, OPT: 5, RelErr: 0.0000
+max gain: 4.0
+[small6 | BnB] Total Runtime: 0.0013 seconds, Collection Size: 3, OPT: 3, RelErr: 0.0000
+max gain: 4.5
+[small7 | BnB] Total Runtime: 0.0004 seconds, Collection Size: 3, OPT: 3, RelErr: 0.0000
+max gain: 3.0
+[small8 | BnB] Total Runtime: 0.0003 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 8.0
+[small9 | BnB] Total Runtime: 0.0007 seconds, Collection Size: 3, OPT: 3, RelErr: 0.0000
+max gain: 2.0
+[test1 | BnB] Total Runtime: 0.0002 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 3.0
+[test2 | BnB] Total Runtime: 0.0002 seconds, Collection Size: 2, OPT: 2, RelErr: 0.0000
+max gain: 2.5
+[test3 | BnB] Total Runtime: 0.0019 seconds, Collection Size: 6, OPT: 6, RelErr: 0.0000
+max gain: 2.5
+[test4 | BnB] Total Runtime: 0.0003 seconds, Collection Size: 4, OPT: 4, RelErr: 0.0000
+max gain: 2.0
+[test5 | BnB] Total Runtime: 0.0004 seconds, Collection Size: 4, OPT: 4, RelErr: 0.0000
