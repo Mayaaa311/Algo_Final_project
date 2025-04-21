@@ -2,7 +2,7 @@
 
 DATA_DIR="data"
 
-for seed in {1..10}; do
+for seed in {1..20}; do
     OUTPUT_FILE="ls2_seed${seed}.out"
     for file in "$DATA_DIR"/*.in; do
         if [[ -f "$file" ]]; then
